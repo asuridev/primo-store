@@ -29,8 +29,8 @@ export function SalesChart({ data }: Props) {
         <XAxis dataKey="label" tick={{ fontSize: 11, fill: '#6b7280' }} />
         <YAxis tickFormatter={fmt} tick={{ fontSize: 11, fill: '#6b7280' }} width={56} />
         <Tooltip
-          formatter={(v: number) =>
-            new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 }).format(v)
+          formatter={(v) =>
+            new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', minimumFractionDigits: 0 }).format(Number(v))
           }
           contentStyle={{ fontSize: 12, borderRadius: 8 }}
         />
